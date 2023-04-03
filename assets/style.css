@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.griglia{
+    height: 500px;
+    width:  500px;
+}
+
+.box{
+    background-color: rgba(192, 189, 189, 0.4);
+    width: calc(100% / 10);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;  
+}
+
+.box2{
+    background-color: rgba(192, 189, 189, 0.4);
+    width: calc(100% / 9);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    cursor: pointer;  
+}
+
+.box3{
+    background-color: rgba(192, 189, 189, 0.4);
+    width: calc(100% / 7);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.blue{
+    background-color: rgba(61, 60, 60, 0.6);
+}
+
+.textwhite{
+    color: white;
+}
+
+.grey{
+    background-image: url(https://th.bing.com/th/id/R.3a01df807de2bcfb8d411e6736132159?rik=YoD8gMDilGd44w&pid=ImgRaw&r=0);
+    background-size: cover;
+}
+
+.banner,
+.footer{
+    background-color: white;
+}
+
