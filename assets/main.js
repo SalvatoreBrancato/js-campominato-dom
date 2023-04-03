@@ -11,23 +11,30 @@ let griglia = document.querySelector(".griglia");
 // costante che richiama il button
 const play = document.querySelector("#gioca");
 
-
  play.addEventListener("click", function(){
      let livello = document.querySelector("#difficoltà").value
-     let bomba = generaBombe(livello)
+     let bomba = generaBombe()
+             console.log(bomba)
      if(livello == 1){
         griglia.innerHTML = "";
+        
          for(let i = 1; i <=100; i++){
              const divbox = creaElementoHtml("div", "box", i);
-            
+             
              griglia.append(divbox)
                    
              divbox.addEventListener("click", function(){
-        
-                 this.classList.toggle("blue")
-                 this.classList.toggle("textwhite")
-                 console.log(i)
-        
+
+                
+                if(bomba.includes(i)) {
+                    this.innerHTML = `<i class="fa-solid fa-bomb fa-shake" style="color: #ef0606;"></i>`
+                   
+                }else{
+                    this.classList.toggle("blue")
+                    this.classList.toggle("textwhite")
+                    console.log(i)
+                }
+                
              })
          }
          
@@ -66,7 +73,7 @@ const play = document.querySelector("#gioca");
  function generaBombe(){
     let arrayBombe = [];
     console.log(arrayBombe)
-    while(arrayBombe.lenght < 16){
+    while(arrayBombe.length < 16){
         let bombe = numeroRandom( 1 , 16 );
         if(!arrayBombe.includes(bombe)){
         arrayBombe.push(bombe);
@@ -78,5 +85,6 @@ const play = document.querySelector("#gioca");
  }
 
  function numeroRandom(min, max){
-    return Math.floor(Math.random() * max) + min
+    return Math.floor((Math.random() * max) + min)
+    
 }
