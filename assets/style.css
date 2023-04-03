@@ -57,3 +57,43 @@
     background-color: white;
 }
 
+main{
+    position: relative;
+}
+
+#display{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(233, 3, 3, 0.6);
+    animation-name: effect;
+    animation-duration: 5s;
+  }
+  
+  @keyframes effect {
+    from {background-color: rgba(233, 3, 3, 0.0);}
+    to {background-color: rgba(233, 3, 3, 0.6);}
+}
+
+#game-over{
+    color: red;
+    font-weight: bold;
+
+    font-size: 70px;
+    animation-name: text;
+    animation-duration: 5s;
+}
+
+@keyframes text {
+    from {font-size: 50px;}
+    to {font-size: 70px;}
+   
+}
+
+
+.none{
+    display: none;
+}
+
